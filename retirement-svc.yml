@@ -15,8 +15,6 @@ spring:
          consume-in-0:
            destination: ref-arch-poc
            group: $Default
-         supply-out-0:
-           destination: ref-arch-poc
 
        eventhub:
          bindings:
@@ -24,7 +22,7 @@ spring:
              consumer:
                checkpoint-mode: MANUAL
        function:
-         definition: consume;supply;
+         definition: consume;
        poller:
          initial-delay: 0
          fixed-delay: 1000
