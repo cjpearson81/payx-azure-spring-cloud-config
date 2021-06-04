@@ -1,0 +1,30 @@
+spring:
+   profiles: default
+   cloud:
+     config:
+       enabled: false
+     azure:
+       eventhub:
+         connection-string: Endpoint=sb://pearson-spring-cloud.servicebus.windows.net/;SharedAccessKeyName=DemoSharedAccessKey;SharedAccessKey=ByAyuDvFCg553pSOa0j7uFdAvncVX0C+H4mZhCGkI2k=
+         checkpoint-storage-account: pearsonspringcloud
+         checkpoint-access-key: X9rx5xkr2RtYIkoYK7E7cOLXqKzz2tYzB7PJN1yDyQcEH0dp8Aro0TsJ0cObFha9dEINNB8SQZDXdNPCpiCbuQ==
+         checkpoint-container: pearsonspringcloudcontainer
+
+     stream:
+       bindings:
+         consume-in-0:
+           destination: ref-arch-poc
+           group: $Default
+         supply-out-0:
+           destination: ref-arch-poc
+
+       eventhub:
+         bindings:
+           consume-in-0:
+             consumer:
+               checkpoint-mode: MANUAL
+       function:
+         definition: consume;supply;
+       poller:
+         initial-delay: 0
+         fixed-delay: 1000
