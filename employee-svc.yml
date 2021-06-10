@@ -5,9 +5,9 @@ spring:
        enabled: false
      azure:
        eventhub:
-         connection-string: Endpoint=sb://pearson-spring-cloud.servicebus.windows.net/;SharedAccessKeyName=DemoSharedAccessKey;SharedAccessKey=ByAyuDvFCg553pSOa0j7uFdAvncVX0C+H4mZhCGkI2k=
+         connection-string: Endpoint=sb://pearson-spring-cloud-eventhub-namespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=5kOTSnL/kVpYA4DwPBYN2SHGa/cYsHKrzMKMyVTCKFA=
          checkpoint-storage-account: pearsonspringcloud
-         checkpoint-access-key: X9rx5xkr2RtYIkoYK7E7cOLXqKzz2tYzB7PJN1yDyQcEH0dp8Aro0TsJ0cObFha9dEINNB8SQZDXdNPCpiCbuQ==
+         checkpoint-access-key: enBxdwD57CHpOHEkQOWbxqdDn6j35GDf7WUlO+8YdoscrDNoBe+WYMBtSRUYuxSnEdlakMrs/Jvvieoa23p1tg==
          checkpoint-container: pearsonspringcloudcontainer
 
      stream:
