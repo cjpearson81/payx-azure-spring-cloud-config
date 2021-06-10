@@ -13,10 +13,10 @@ spring:
      stream:
        bindings:
          consume-in-0:
-           destination: ref-arch-poc
+           destination: pearson-spring-cloud-eventhub
            group: employee-svc
          supply-out-0:
-           destination: ref-arch-poc
+           destination: pearson-spring-cloud-eventhub
 
        eventhub:
          bindings:
